@@ -24,7 +24,3 @@ class Triangle(Figure):
                 (self._p-self.side_a) *
                 (self._p-self.side_b) *
                 (self._p-self.side_c)) ** 0.5
-
-
-t = Triangle(5, 5, 5)
-print(t.get_area())
