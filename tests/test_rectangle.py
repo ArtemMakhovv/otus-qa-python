@@ -43,5 +43,3 @@ def test_rectangle_add_area_negative():
     with pytest.raises(ValueError):
         rectangle = Rectangle(2, 3)
         assert rectangle.add_area(6)
-
-
