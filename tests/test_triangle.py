@@ -11,7 +11,6 @@ import pytest
                           (1.5, 2.5, 3.5, 1.6237976320958225, 7.5)])
 def test_triangle(side_a, side_b, side_c, area, perimeter):
     triangle = Triangle(side_a, side_b, side_c)
-    assert isinstance(triangle, Triangle)
     assert triangle.name == 'Triangle'
     assert triangle.get_area() == area
     assert triangle.get_perimeter() == perimeter

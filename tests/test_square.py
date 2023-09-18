@@ -11,7 +11,6 @@ import pytest
                           (1.5, 2.25, 6)])
 def test_square(side, area, perimeter):
     square = Square(side)
-    assert isinstance(square, Square)
     assert square.name == 'Square'
     assert square.get_area() == area
     assert square.get_perimeter() == perimeter

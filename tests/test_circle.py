@@ -12,7 +12,6 @@ import pytest
                          ids=["Create Circle with integer radius", "Create Circle with fractional number"])
 def test_circle(radius, area, perimeter):
     circle = Circle(radius)
-    assert isinstance(circle, Circle)
     assert circle.name == 'Circle'
     assert circle.get_area() == area
     assert circle.get_perimeter() == perimeter

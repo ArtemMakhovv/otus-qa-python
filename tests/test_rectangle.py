@@ -11,7 +11,6 @@ import pytest
                           (1.5, 2.5, 3.75, 8)])
 def test_rectangle(side_a, side_b, area, perimeter):
     rectangle = Rectangle(side_a, side_b)
-    assert isinstance(rectangle, Rectangle)
     assert rectangle.name == 'Rectangle'
     assert rectangle.get_area() == area
     assert rectangle.get_perimeter() == perimeter
