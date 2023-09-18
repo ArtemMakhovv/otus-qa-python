@@ -8,9 +8,10 @@ class Circle(Figure):
             raise ValueError("Can't create Circle")
         self.radius = radius
         self.name = 'Circle'
+        self._pi = 3.14
 
     def get_area(self):
-        return 3.14 * self.radius ** 2
+        return float(format(self._pi * self.radius ** 2, ".15g"))
 
     def get_perimeter(self):
-        return 2 * 3.14 * self.radius
+        return float(format(2 * self._pi * self.radius, ".15g"))
