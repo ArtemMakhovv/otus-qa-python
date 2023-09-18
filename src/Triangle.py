@@ -12,13 +12,13 @@ class Triangle(Figure):
         self.side_a = side_a
         self.side_b = side_b
         self.side_c = side_c
-        self._p = self.get_perimeter() / 2  # Получаем полупериметр для вычесления площади треугольника
+        self._half_perimetr = self.get_perimeter() / 2  # Получаем полупериметр для вычесления площади треугольника
 
     def get_perimeter(self):
         return self.side_a + self.side_b + self.side_c
 
     def get_area(self):
-        return (self._p *
-                (self._p-self.side_a) *
-                (self._p-self.side_b) *
-                (self._p-self.side_c)) ** 0.5
+        return (self._half_perimetr *
+                (self._half_perimetr-self.side_a) *
+                (self._half_perimetr-self.side_b) *
+                (self._half_perimetr-self.side_c)) ** 0.5

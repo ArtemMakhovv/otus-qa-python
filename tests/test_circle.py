@@ -8,7 +8,8 @@ import pytest
 
 @pytest.mark.parametrize(('radius', 'area', 'perimeter'),
                          [(10, 314, 62.8),
-                          (1.5, 7.065, 9.42)])
+                          (1.5, 7.065, 9.42)],
+                         ids=["Create Circle with integer radius", "Create Circle with fractional number"])
 def test_circle(radius, area, perimeter):
     circle = Circle(radius)
     assert isinstance(circle, Circle)
