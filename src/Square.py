@@ -7,4 +7,4 @@ class Square(Rectangle):
             raise ValueError("Can't create Square")
         super().__init__(side, side)
         self.side = side
-        self.name = 'Rectangle'
+        self.name = 'Square'
