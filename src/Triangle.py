@@ -6,9 +6,7 @@ class Triangle(Figure):
         super().__init__()
         if side_a <= 0 or side_b <= 0 or side_c <= 0:
             raise ValueError("Can't create Triangle")
-        if side_a + side_b < side_c\
-            or side_b + side_c < side_a \
-                or side_a + side_c < side_b:
+        if side_a + side_b <= side_c or side_b + side_c <= side_a or side_a + side_c <= side_b:
             raise ValueError("Can't create Triangle")
         self.name = 'Triangle'
         self.side_a = side_a
