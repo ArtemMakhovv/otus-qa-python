@@ -14,21 +14,21 @@ def read_books(file):
         reader = DictReader(f)
         for row in reader:
             row.pop("Publisher")
+            row["Pages"] = int(row["Pages"])
             yield row
 
 
 with open(USERS, "r") as f:
     users = json.loads(f.read())
     for user in users:
-        user_dict = {}
-        user_dict.update(
+        result_json.append(
             {"name": user["name"],
              "gender": user["gender"],
              "address": user["address"],
              "age": user["age"],
              "books": []
-             })
-        result_json.append(user_dict)
+             }
+        )
 
 one_book = read_books(BOOKS)
 
@@ -40,5 +40,5 @@ while True:
         break
 
 with open('result.json', "w") as f:
-    s = json.dumps(result_json, indent=4)
-    f.write(s)
+    json_file = json.dumps(result_json, indent=4)
+    f.write(json_file)
